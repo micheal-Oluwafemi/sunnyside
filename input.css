@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.showcaseBg {
+  background-image: url('../images/desktop/image-header.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.egg {
+  background-image: url('../images/desktop/image-transform.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.cup {
+  background-image: url('../images/desktop/image-stand-out.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.cherry {
+  background-image: url('../images/desktop/image-graphic-design.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.orange {
+  background-image: url('../images/desktop/image-photography.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.youghurt {
+  background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.slicedOrange {
+  background-image: url('../images/desktop/image-gallery-orange.jpg');
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.iceCream {
+  background-image: url('../images/desktop/image-gallery-cone.jpg');
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.cube {
+  background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.arrAnime {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.top,
+.middle,
+.bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: all 0.2s;
+}
+
+.middle {
+  transform: translateY(7px);
+}
+
+.bottom {
+  transform: translateY(14px);
+}
+
+.open .top {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.open .middle {
+  display: none;
+}
+
+.open .bottom {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+.mobileMenu {
+  animation: moveInBottom 2s ease-in-out forwards both;
+}
+
+.clippy {
+  clip-path: polygon(
+    95% 7%,
+    100% 0%,
+    100% 60%,
+    100% 100%,
+    0% 100%,
+    0 59%,
+    0 7%
+  );
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .showcaseBg {
+    background-image: url('../images/desktop/mobile-image-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
